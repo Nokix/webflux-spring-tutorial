@@ -1,4 +1,4 @@
-package gmbh.conteco.webfluxspringtutorial;
+package gmbh.conteco.webfluxspringtutorial.controller;
 
 import com.github.javafaker.Faker;
 import lombok.RequiredArgsConstructor;
@@ -26,4 +26,6 @@ public class ReactiveNameController {
         return Flux.fromIterable(names)
                 .delayElements(Duration.ofSeconds(1));
     }
+
+
 }
