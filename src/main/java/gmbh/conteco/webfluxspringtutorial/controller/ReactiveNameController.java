@@ -17,7 +17,9 @@ public class ReactiveNameController {
     public final Faker faker;
 
     @GetMapping("/names")
-    public Flux<String> getNames(@RequestParam(defaultValue = "10") int amount) {
+    public Flux<String> getNames(
+            @RequestParam(defaultValue = "10") int amount
+    ) {
         List<String> names = Stream
                 .generate(() -> faker.name().fullName() + " ")
                 .limit(amount)
@@ -26,6 +28,4 @@ public class ReactiveNameController {
         return Flux.fromIterable(names)
                 .delayElements(Duration.ofSeconds(1));
     }
-
-
 }

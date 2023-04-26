@@ -14,14 +14,14 @@ import org.springframework.r2dbc.connection.init.ConnectionFactoryInitializer;
 import org.springframework.r2dbc.connection.init.ResourceDatabasePopulator;
 import org.springframework.web.reactive.config.EnableWebFlux;
 
+//https://www.bezkoder.com/spring-boot-r2dbc-h2/
+
 @SpringBootApplication
-@EnableR2dbcRepositories // not necessary
 @EnableWebFlux
 public class WebfluxSpringTutorialApplication {
 
-    //https://www.bezkoder.com/spring-boot-r2dbc-h2/
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(WebfluxSpringTutorialApplication.class, args);
+        SpringApplication.run(WebfluxSpringTutorialApplication.class, args);
     }
 
     @Bean
